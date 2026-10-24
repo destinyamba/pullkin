@@ -62,6 +62,13 @@
   .copy:hover { background: #E2694A; }
   .copy:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
   .needs { font-size: 14px; color: var(--faint); margin-top: 12px; }
+  .run { margin-top: 32px; }
+  .run-label { font-size: 14px; color: var(--muted); margin: 0 0 8px; }
+  .run dl { margin: 0; }
+  .run dl div { display: grid; grid-template-columns: 11em 1fr; gap: 16px; padding: 9px 0; border-top: 1px solid var(--rule); }
+  .run dt code { color: var(--text); }
+  .run dd { margin: 0; color: var(--muted); font-size: 15px; }
+  .run kbd { font-family: "JetBrains Mono", monospace; font-size: 0.85em; background: var(--surface-up); padding: 1px 6px; color: var(--text); }
 
   .terminal { background: #0F0F0D; padding: 22px 24px 24px; overflow-x: auto; }
   .screen { font-family: "JetBrains Mono", monospace; font-size: 13.5px; line-height: 1.8; white-space: pre; color: #D9D9D2; }
@@ -130,6 +137,7 @@
     .rules { grid-template-columns: 1fr; }
     .rule:nth-child(2) { margin-top: 0; }
     .tradeoffs { grid-template-columns: 1fr; gap: 28px; }
+    .run dl div { grid-template-columns: 1fr; gap: 2px; }
     .screen { font-size: 12px; }
     .terminal { padding: 16px; }
     nav .links { gap: 16px; }
@@ -156,6 +164,14 @@
         <button class="copy" type="button" id="copy">Copy</button>
       </div>
       <p class="needs">Needs the <a href="https://cli.github.com">GitHub CLI</a>, signed in. Works with Go modules and npm.</p>
+      <div class="run">
+        <p class="run-label">Then, in your project folder:</p>
+        <dl>
+          <div><dt><code>gh pullkin</code></dt><dd>Opens the list. Press <kbd>c</kbd> to claim an issue.</dd></div>
+          <div><dt><code>gh pullkin list</code></dt><dd>The same list as plain text.</dd></div>
+          <div><dt><code>gh pullkin nudge</code></dt><dd>Shows the issues you claimed.</dd></div>
+        </dl>
+      </div>
     </div>
 
     <div>
